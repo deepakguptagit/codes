@@ -1,0 +1,19 @@
+Problem:
+
+You are given a line segment starting from S and ending at E along with few points on this line segment. (For simplicity assume it to be on X axis).
+For each of these points two values are associated: 
+	xi(denotes the position of point w.r.t origin)
+	pi(extent to which a point can secure the line segment). 
+	(This point can secure length from xi-pi to xi+pi)
+
+Find the total length which is not secured by any point on the line segment.
+
+
+Solution to this problem is straight forward. 
+
+1) Find all the segments which are secured in ascending order of their distance from orgin (if distance from origin is same, sort acc. to lengths). 
+2) start scanning all segments sorted in step 1 and add the unsecured area to the total count
+3) total count is the required answer.
+
+STL makes implementation of above algorithm really easy. Have a look at setter's and tester's solution for reference.
+
