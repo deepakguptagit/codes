@@ -24,6 +24,6 @@ int main(){
 			break;
 		}
 	}	
-	cout << i << endl;
+	cout << i+1 << endl;
 
 }
