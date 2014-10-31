@@ -1,0 +1,17 @@
+Problem:
+
+Given a string (S) and two indices find if both characters are same on those two indices. Now, S is not given to you directly but a string x is given which should be repeated so as to form S.
+
+Solution of this problem is straight forward. just take mod(%) if the given index of String S this will give you which character from x will be there on that index in String S. 
+
+To understand, why it is always true is let us go through a simple example:
+let x = "hello"
+now, S will be "hellohellohellohello..."
+
+You can observe that position of h's are 0,5,10... which are all multiples of 5. (%5 == 0)
+All the e's will be at a position of form 5*n + 1  (%5 == 1)
+All the l's will be at a position of form 5*n + 2  (%5 == 2)
+....
+
+Have look at the solution for implementation of same idea.
+

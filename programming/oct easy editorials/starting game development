@@ -1,0 +1,31 @@
+Let us first solve the simpler version of this problem:
+
+Given a sorted array(ARR) of size m and a value(v) find the maximum index in arr, value of which is less than or equal to arr.
+
+Above problem can easily be solved using binary search.
+
+Algorithm:
+
+(check if middle element is greater than v)
+If yes, answer is guaranteed to lie in left half. 
+else answer lies in right half.
+
+
+Running time complexity : O(logm), where m is the size of ARR.
+
+Now, what if there are n such problems ? 
+
+1) There will be n array ARR of size m, equivalent to a matrix of size n X m.
+2) There will be n differen't v's. There will be an array of v of size n.
+3) There will be an integer array of solutions (let us call it SOL)
+
+This problems asks you to find the minimum value in SOL. 
+SOL can be found in O(n*logm) time. (logm for each of n problems)
+Minimum from SOL can be found in O(n)
+
+Overall complexity : O(n*logm) + O(n) = O(n*logm)
+considering the constraints this complexity is sufficient to get AC for this problem.
+
+There's also a O(n+m) method to solve this problem.
+
+suppose you do linear search to find answer for first row. Then, it is guaranteed that answer will be less than or equal to just found index. Now, for the next row only move backward if value for that row is greater than value at that index and keep moving this way till the last row. This method is O(m + n).
